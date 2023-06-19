@@ -1,0 +1,62 @@
+﻿@model Student
+
+<div class="inner-big-box text-start col-12">
+    <h1 class="text-center mb-5 mt-2 screen-name">Student Registration</h1>
+    <form asp-controller="Student" asp-action="Add" method="post">
+        <div class="row d-flex justify-content-center">
+            <div class="mb-2 col-lg-5 col-md-10 col-sm-9">
+                <label asp-for="Name" class="form-label">Name:</label>
+                <span class="text-danger" asp-validation-for="Name"></span>
+                <input asp-for="Name" class="form-control" placeholder="e.g. Hazim Adel Ahmed Mohammed Al-saqqaf" />
+            </div>
+            <div class="mb-2 col-lg-5 col-md-10 col-sm-9">
+                <label asp-for="Sex" class="form-label">Sex: </label>
+                <span class="text-danger" asp-validation-for="Sex"></span>
+                <select class="form-select" asp-for="Sex">
+                    <option value="Male" selected>Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="mb-2 col-lg-5 col-md-10 col-sm-9">
+                <label asp-for="DOB" class="form-label" min="10" max="100">DOB:</label>
+                <span class="text-danger" asp-validation-for="DOB"></span>
+                <input type="date" class="form-control" asp-for="DOB" />
+            </div>
+            <div class="mb-2 col-lg-5 col-md-10 col-sm-9">
+                <label asp-for="Email" class="form-label">Email: </label>
+                <span class="text-danger" asp-validation-for="Email"></span>
+                <input type="email" class="form-control" asp-for="Email" placeholder="example@gmail.com">
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="mb-2 col-lg-5 col-md-10 col-sm-9">
+                <label asp-for="Phone" class="form-label">Phone Number:</label>
+                <span class="text-danger" asp-validation-for="Phone"></span>
+                <input type="tel" class="form-control" asp-for="Phone" />
+            </div>
+            <div class="mb-2 col-lg-5 col-md-10 col-sm-9">
+                <label asp-for="Course" class="form-label">Course:</label>
+                <span class="text-danger" asp-validation-for="Course"></span>
+                <input type="text" class="form-control" as-for="Course" />
+            </div>
+        </div>
+        <div class="row d-flex justify-content-lg-start justify-content-md-center justify-content-sm-center">
+            <div class="mb-2 col-lg-2 offset-lg-1 col-md-5 col-sm-9">
+                <label asp-for="StartTime" class="form-label">From:</label>
+                <span class="text-danger" asp-validation-for="StartTime"></span>
+                <input type="time" class="form-control" asp-for="StartTime" />
+            </div>
+            <div class="mb-2 col-lg-2 col-md-5 col-sm-9">
+                <label asp-for="EndTime" class="form-label">To:</label>
+                <span class="text-danger" asp-validation-for="EndTime"></span>
+                <input type="time" class="form-control" asp-for="EndTime" />
+            </div>
+        </div>
+        <div class="pt-5 d-flex justify-content-center">
+            <button class="btn left_btn" type="submit">Add</button>
+            <button asp-action="Update" class="btn right_btn"> Update</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,293 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Aperture">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMS - @ViewData["Title"]</title>
+    <meta name="description" content="Aperture">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!--<img src="logo.png" alt="">-->
+                </span>
+                <div class="text logo-text">
+                    <span class="name">Academia</span>
+                    <span class="profession">The perect software</span>
+                </div>
+            </div>
+            <i class="fa-solid fa-chevron-right toggle"></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='fa-solid fa-magnifying-glass icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                @*<ul class="menu-links">*@
+                <li class="">
+                    <a href="#">
+                        <i class='fa-solid fa-chart-line icon'></i>
+                        <span class="text nav-text">Dashboard</span>
+                    </a>
+                </li>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#user-collapse" aria-expanded="false">
+                    <a href="#">
+                        <i class="fa-solid fa-users icon"></i>
+                        <span class="text nav-text">
+                            Users
+                        </span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="user-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">Add</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Updates</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Overview</a></li>
+                    </ul>
+                </div>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#class-collapse" aria-expanded="false">
+                    <a href="#">
+                        <i class="fa-solid fa-chalkboard icon"></i>
+                        <span class="text nav-text">
+                            Classes
+                        </span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="class-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">Add</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Updates</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Overview</a></li>
+                    </ul>
+                </div>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#course-collapse" aria-expanded="false">
+                    <a href="#">
+                        <i class="fa-solid fa-table-columns icon"></i>
+                        <span class="text nav-text">
+                            Courses
+                        </span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="course-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">Add</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Updates</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Overview</a></li>
+                    </ul>
+                </div>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#student-collapse" aria-expanded="false">
+                    <a href="#">
+                        <i class="fa-solid fa-user-graduate icon"></i>
+                        <span class="text nav-text">
+                            Students
+                        </span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="student-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">Add</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Updates</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Overview</a></li>
+                    </ul>
+                </div>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#employee-collapse" aria-expanded="false">
+                    <a href="#">
+                        @*circle-user*@
+                        <i class="fa-solid fa-person-half-dress fa-2xl icon"></i>
+                        <span class="text nav-text">
+                            Employees
+                        </span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="employee-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">Add</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Updates</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Overview</a></li>
+                    </ul>
+                </div>
+
+                <li class="">
+                    <a href="#">
+                        <i class="fa-solid fa-chart-simple icon"></i>
+                        <span class="text nav-text">Analytics</span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="fa-solid fa-bell icon"></i>
+                        <span class="text nav-text">Notifications</span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="fa-solid fa-chart-pie icon"></i>
+                        <span class="text nav-text">Stats</span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a href="#">
+                        <i class="fa-solid fa-wallet icon"></i>
+                        <span class="text nav-text">Money</span>
+                    </a>
+                </li>
+
+                </ul>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#fee-collapse" aria-expanded="false">
+                    <a href="#">
+                        <i class="fa-solid fa-hand-holding-dollar icon"></i>
+                        <span class="text nav-text">
+                            Fees
+                        </span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="fee-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">Fees</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Generate Bank Challan</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Collect Fee</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Fee Slip</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Fees Defaulters</a></li>
+                    </ul>
+                </div>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#salary-collapse" aria-expanded="false">
+                    <a href="#">
+                        <i class="fa-solid fa-money-check-dollar icon"></i>
+                        <span class="text nav-text">
+                            Salary
+                        </span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="salary-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">Pay Salary</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Salary Slip</a></li>
+                    </ul>
+                </div>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#attendance-collapse" aria-expanded="false">
+                    <a href="#">
+                        <i class="fa-solid fa-check-double icon"></i>
+                        <span class="text nav-text">
+                            Attendance
+                        </span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="attendance-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">Students</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Employees</a></li>
+                    </ul>
+                </div>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#exam-collapse" aria-expanded="false">
+                    <a href="#">
+                        <i class="fa-solid fa-file-circle-question icon"></i>
+                        <span class="text nav-text">
+                            Exames
+                        </span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="exam-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">Add</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Updates</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Result Card</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Overview</a></li>
+                    </ul>
+                </div>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#report-collapse" aria-expanded="false">
+                    <a href="#">
+                        <i class="fa-solid fa-print icon"></i>
+                        <span class="text nav-text">Reports</span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="report-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">Student</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Employee</a></li>
+                    </ul>
+                </div>
+
+                <li class="" data-bs-toggle="collapse" data-bs-target="#setting-collapse" aria-expanded="false">
+                    <a href="#">
+                        <i class="fa-solid fa-gear icon"></i>
+                        <span class="text nav-text">
+                            Settings
+                        </span>
+                    </a>
+                </li>
+                <div class="ps-5 collapse" id="setting-collapse">
+                    <ul class="btn-toggle-nav list-unstyled pb-1">
+                        <li class="text nav-text"><a class="list" href="#">institute profile</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Fee Particulars</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Fee Challan detail</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Rules & Requlations</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Marks Grading</a></li>
+                        <li class="text nav-text"><a class="list" href="#">Language</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-from-bracket icon"></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-sun icon sun'></i>
+                        <i class="fa-solid fa-sun icon sun"></i>
+                        <i class="fa-solid fa-moon icon moon"></i>
+                    </div>
+                    <span class="mode-text text">Light mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <section class="home">
+        <main role="main" class="text">
+            @RenderBody()
+        </main>
+    </section>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
